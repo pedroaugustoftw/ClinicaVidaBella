@@ -85,8 +85,13 @@
   .gallery-stage .service-img .photo-document .photo-caption strong { font-size: 15px; }
   .gallery-stage .service-img > span { left: 15%; top: 12px; transform: none; }
   .gallery-stage .service-body { padding-top: 20px; }
-  .gallery-stage .feature-image.photo-composition { height: 32vh; min-height: 230px; width: 78%; margin: 0 auto 36px; }
-  .gallery-stage .feature-image .photo-caption { right: -9%; bottom: 4%; width: 148px; padding: 16px; border-radius: 23px; }
+  .gallery-stage .feature-image.photo-composition { height: auto; min-height: 0; width: 100%; margin: 0 auto 24px; display: flex; flex-direction: column; gap: 14px; }
+  .gallery-stage .feature-image .photo-window { width: 90%; height: clamp(200px, 32vh, 300px); margin-inline: auto; flex-shrink: 0; }
+  .gallery-stage .feature-image .photo-caption { position: static; inset: auto; width: 90%; margin-inline: auto; padding: 14px 16px; border-radius: 18px; display: grid; grid-template-columns: 28px 1fr; gap: 5px 12px; }
+  .gallery-stage .feature-image .photo-caption .photo-badge { grid-row: 1 / 3; align-self: center; }
+  .gallery-stage .feature-image .photo-caption .photo-caption-rule { display: none; }
+  .gallery-stage .feature-image .photo-caption strong { grid-column: 2; font-size: 16px; }
+  .gallery-stage .feature-image .photo-caption strong br { display: none; }
   .gallery-stage .doctor-photo.photo-composition { width: 88%; height: 36vh; min-height: 280px; margin-bottom: 26px; }
   .gallery-stage .doctor-photo .photo-caption { width: 150px; padding: 16px; right: -7%; bottom: 6%; border-radius: 23px; }
   .gallery-stage .result-visual .photo-window { border-radius: 16px; }
