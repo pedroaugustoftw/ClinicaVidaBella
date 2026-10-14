@@ -1,4 +1,9 @@
 /* A fixed stage: scrolling changes the scene instead of moving the layout. */
+.gallery-fluid .gallery-scene,
+.gallery-fluid .gallery-stage .service-card,
+.gallery-fluid .gallery-stage .result-card { transition: none; will-change: opacity, transform; }
+.gallery-fluid .gallery-scene > div,
+.gallery-fluid .gallery-scene:not(.scene-active) > div { transform: none; transition: none; }
 .gallery-enabled { scroll-behavior: auto; scroll-padding: 0; }
 .gallery-enabled body { overflow-x: hidden; }
 .gallery-enabled .topline, .gallery-stage > .ticker { display: none; }
