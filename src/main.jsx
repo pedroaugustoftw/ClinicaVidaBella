@@ -38,8 +38,8 @@ const questions = [
   ['Onde fica a Clínica Vida Bella?', 'No Empresarial Metropolitan, Avenida Deputada Ceci Cunha, 1179, térreo, sala 9, em Arapiraca, Alagoas.'],
   ['Os resultados são iguais para todas as pessoas?', 'Não. Os resultados variam conforme características individuais, procedimento e acompanhamento profissional.'],
 ];
-function Brand({ light = false, footer = false }) {
-  return <span className="brand-lockup"><img src={assetUrl(`/brand/vida-bella${footer ? '-footer' : light ? '-white' : ''}.svg`)} alt="Vida Bella" /><span>CLÍNICA DE ESTÉTICA</span></span>;
+function Brand({ footer = false }) {
+  return <span className="brand-lockup"><img src={assetUrl(`/brand/vida-bella${footer ? '-footer' : ''}.svg`)} alt="Vida Bella" /><span>CLÍNICA DE ESTÉTICA</span></span>;
 }
 function WhatsAppLink({ children, message, className = 'btn primary' }) {
   return <a className={className} href={whatsapp(message)} target="_blank" rel="noreferrer">{children}<ArrowUpRight size={18} /></a>;
