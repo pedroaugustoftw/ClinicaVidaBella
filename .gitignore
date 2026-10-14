@@ -1,0 +1,20 @@
+node_modules/
+dist/
+design/
+*.log
+.env
+.env.*
+!.env.example
+
+# Original inputs and local previews; site assets live in public/.
+/*.png
+/*.jpg
+/*.webp
+/logo-vida-bella.svg
+
+# Full-size working PNGs have optimized WebP equivalents in the site.
+/public/images/*.png
+/public/images/logo-original.webp
+/public/images/mariana-rocha.webp
+/public/images/resultado-[1-4].webp
+/public/images/instagram/post-*.jpg

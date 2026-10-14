@@ -1,0 +1,98 @@
+/* Rounded photography, botanical details and warm shapes from estetica.png. */
+.photo-composition { --photo-accent: #d7bfa4; --photo-paper: #faf7f2; position: relative; isolation: isolate; margin: 0; overflow: visible; }
+.photo-composition::before {
+  content: ''; position: absolute; z-index: -1; inset: 7% -12% -5% 10%;
+  background: linear-gradient(145deg, #e7d7c340, #dec9ae75);
+  border-radius: 48% 48% 2% 48%; pointer-events: none;
+}
+.photo-botanical { position: absolute; left: -21%; top: -6%; width: 44%; height: 57%; z-index: -1; color: var(--photo-accent); pointer-events: none; }
+.botanical-stem { stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; }
+.botanical-leaves { fill: currentColor; fill-opacity: .22; stroke: currentColor; stroke-width: .6; stroke-opacity: .18; }
+.photo-window { position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 72px 72px 72px 72px; background: transparent; }
+.gallery-stage .photo-composition .photo-window > img { display: block; width: 100%; height: 100%; max-width: 100%; object-fit: cover; object-position: center; transform: none; }
+.photo-caption {
+  position: absolute; z-index: 2; right: -12%; bottom: 18%;
+  width: 205px; padding: 25px; border: 0; border-radius: 30px;
+  background: #faf7f2f5; color: #302c27; box-shadow: 0 12px 38px #715c3c08;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 11px;
+}
+.photo-caption-label { font: 9px 'DM Sans', sans-serif; letter-spacing: 1.5px; line-height: 1.8; color: #9b815a; }
+.photo-caption strong { font: 400 21px/1.4 'Playfair Display', serif; }
+.photo-caption-rule { width: 32px; height: 1px; background: #d1baa0; margin: 2px 0; }
+.photo-badge { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: #947b4e; color: #fff; }
+.gallery-stage .essence-photo.photo-composition { width: min(100%, 450px); height: min(63vh, 570px); margin: 0 auto; }
+.gallery-stage .essence-photo .photo-window > img { object-position: center 44%; }
+.gallery-stage .essence-photo .photo-caption { position: absolute; left: auto; top: auto; right: -12%; bottom: 10%; width: 224px; padding: 24px; background: #faf7f2f5; border: 0; display: flex; }
+.gallery-stage .essence-photo .photo-caption strong { font-size: 20px; }
+.gallery-stage .essence-photo .photo-caption > span:first-child { color: white; }
+.gallery-stage .essence-photo .photo-caption > span:last-child { font-family: inherit; font-size: inherit; }
+.gallery-stage .services .service-grid { width: min(100%, 47vh); height: min(68vh, 620px); }
+.gallery-stage .service-img { overflow: visible; }
+.gallery-stage .service-img .photo-composition { height: 100%; width: 100%; }
+.gallery-stage .service-img .photo-window { border-radius: 52px; }
+.gallery-stage .service-img .photo-caption { width: 172px; padding: 20px; right: -11%; bottom: 9%; }
+.gallery-stage .service-img .photo-caption strong { font-size: 19px; }
+.gallery-stage .service-img > span { z-index: 3; top: 18px; left: 24px; border-radius: 50%; width: 32px; height: 32px; display: grid; place-items: center; padding: 0; }
+.gallery-stage .service-img .photo-document .photo-window > img { object-fit: contain; }
+.gallery-stage .service-img .photo-document .photo-caption { right: -16%; bottom: -12px; width: 150px; padding: 16px; }
+.gallery-stage .service-img .photo-document .photo-caption strong { font-size: 17px; }
+.gallery-stage .service-img .photo-document .photo-caption { display: none; }
+.gallery-stage .service-body { position: relative; z-index: 4; padding-top: 28px; }
+.gallery-stage .feature-image.photo-composition { width: min(68%, 440px); height: min(66vh, 590px); aspect-ratio: auto; max-width: none; margin: 0; }
+.gallery-stage .feature-image .photo-window > img { object-position: center 52%; }
+.gallery-stage .feature-image .photo-caption { right: -15%; bottom: 12%; }
+.gallery-stage .doctor-photo.photo-composition { width: 88%; height: min(61vh, 550px); background: transparent; justify-self: center; }
+.gallery-stage .doctor-photo .photo-window > img { object-position: center 25%; }
+.gallery-stage .doctor-photo .photo-caption { right: -12%; bottom: 5%; width: 188px; padding: 22px; }
+.gallery-stage .result-visual.photo-composition { --photo-accent: #947650; display: flex; flex-direction: column; width: 100%; }
+.gallery-stage .result-visual.photo-composition::before { inset: 6% 0 3% 12%; background: #a3845520; }
+.gallery-stage .result-visual .photo-botanical { left: -3%; width: 30%; opacity: .65; }
+.gallery-stage .result-visual .photo-window { flex: 1; min-height: 0; border-radius: 20px; }
+.gallery-stage .result-visual .photo-window > img { object-fit: contain; }
+.gallery-stage .result-visual .photo-caption { position: static; width: auto; padding: 15px 0 0; border-radius: 0; background: none; box-shadow: none; color: #a99f91; font: 9px 'DM Sans', sans-serif; letter-spacing: 1px; align-self: center; }
+.photo-cutout::before { inset: 12% 6% 0 10%; background: linear-gradient(135deg, #a68d622c, #a68d6212); border-radius: 45% 45% 0 45%; }
+.gallery-stage .hero-photo.photo-cutout { overflow: visible; }
+.photo-cutout > .photo-botanical { color: #a68d62; opacity: .4; left: 0; top: 12%; width: 28%; z-index: 0; }
+.photo-cutout > img { z-index: 1; }
+.social-grid { position: relative; }
+.social-grid::before { content: ''; position: absolute; inset: 8% -3% -7% 6%; border-radius: 48% 48% 3% 40%; background: #b4946620; }
+.social-card { border-radius: 32px; }
+.gallery-stage .contact-photo { border-radius: 32px 32px 0 0; }
+@media(max-width: 1100px) {
+  .photo-window { border-radius: 52px; }
+  .photo-caption { width: 170px; padding: 20px; }
+  .photo-caption strong { font-size: 18px; }
+  .gallery-stage .essence-photo .photo-caption { width: 170px; padding: 20px; right: -8%; }
+  .gallery-stage .feature-image .photo-caption { right: -10%; width: 170px; padding: 20px; }
+  .gallery-stage .doctor-photo .photo-caption { right: -8%; width: 162px; padding: 18px; }
+}
+@media(max-width: 700px) {
+  .gallery-stage .services .service-grid { width: 100%; height: 43vh; min-height: 270px; }
+  .photo-window { border-radius: 38px; }
+  .photo-composition::before { inset: 8% -5% -4% 12%; }
+  .photo-botanical { left: -8%; width: 32%; top: -4%; opacity: .65; }
+  .gallery-stage .essence-photo.photo-composition { width: min(80%, 280px); height: 34vh; min-height: 240px; margin: 0 auto 24px; }
+  .gallery-stage .essence-photo .photo-caption { right: -10%; bottom: 8%; width: 150px; padding: 16px; border-radius: 23px; }
+  .photo-caption strong { font-size: 16px; }
+  .photo-caption-label { font-size: 8px; letter-spacing: 1px; }
+  .photo-caption-rule { margin: 0; }
+  .photo-badge { width: 24px; height: 24px; }
+  .gallery-stage .service-img .photo-composition { width: 82%; margin: 0 auto; }
+  .gallery-stage .service-img .photo-window { border-radius: 34px; }
+  .gallery-stage .service-img .photo-caption,
+  .gallery-stage .service-img .photo-document .photo-caption { width: 125px; padding: 13px; right: -7%; bottom: 0; border-radius: 22px; }
+  .gallery-stage .service-img .photo-caption strong,
+  .gallery-stage .service-img .photo-document .photo-caption strong { font-size: 15px; }
+  .gallery-stage .service-img > span { left: 15%; top: 12px; transform: none; }
+  .gallery-stage .service-body { padding-top: 20px; }
+  .gallery-stage .feature-image.photo-composition { height: 32vh; min-height: 230px; width: 78%; margin: 0 auto 36px; }
+  .gallery-stage .feature-image .photo-caption { right: -9%; bottom: 4%; width: 148px; padding: 16px; border-radius: 23px; }
+  .gallery-stage .doctor-photo.photo-composition { width: 88%; height: 36vh; min-height: 280px; margin-bottom: 26px; }
+  .gallery-stage .doctor-photo .photo-caption { width: 150px; padding: 16px; right: -7%; bottom: 6%; border-radius: 23px; }
+  .gallery-stage .result-visual .photo-window { border-radius: 16px; }
+  .gallery-stage .result-visual.photo-composition::before { inset: 6% -2% 3% 8%; }
+  .gallery-stage .result-visual .photo-caption { font-size: 8px; }
+  .social-card { border-radius: 20px; }
+  .photo-cutout::before { inset: 18% 8% 0 12%; }
+  .photo-cutout > .photo-botanical { opacity: .3; width: 30%; }
+}
