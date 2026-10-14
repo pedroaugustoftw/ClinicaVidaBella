@@ -11,6 +11,7 @@ import { CareQuestionnaire } from './CareQuestionnaire';
 import { whatsapp } from './whatsapp';
 import { assetUrl } from './assets';
 import './hero-reference.css';
+import './hero-mobile.css';
 import { useScrollGallery } from './useScrollGallery';
 import { ScrollGalleryNavigation } from './ScrollGalleryNavigation';
 
@@ -63,12 +64,13 @@ function App() {
       <section className="hero" id="inicio">
         <div className="hero-content">
           <div className="eyebrow"><span className="eyebrow-line" /> ESTÉTICA, CUIDADO & BEM-ESTAR</div>
-          <h1>A beleza de ser <em>você mesma.</em></h1>
+          <h1><span>A beleza</span> <span>de ser</span> <em>você mesma.</em></h1>
           <p>Um espaço dedicado à sua autoestima, com acolhimento, atenção aos detalhes e cuidado que respeita sua individualidade.</p>
           <div className="hero-actions"><button type="button" className="btn primary hero-questionnaire" aria-haspopup="dialog" aria-expanded={careOpen} aria-controls="care-questionnaire" onClick={() => setCareOpen(true)}>Descubra seu cuidado ideal <ArrowUpRight size={18} /></button><WhatsAppLink className="btn hero-direct">Agendar minha avaliação</WhatsAppLink><a className="text-link" href="#tratamentos">Conhecer tratamentos <ArrowRight size={17} /></a></div>
           <div className="hero-values">{[[Leaf, 'Tratamentos', 'personalizados'], [Flower2, 'Beleza natural', 'e harmoniosa'], [Heart, 'Atendimento', 'humanizado'], [ShieldCheck, 'Ambiente seguro', 'e acolhedor']].map(([Icon, line1, line2]) => <div key={line1}><Icon size={28} strokeWidth={1.2} aria-hidden="true" /><span>{line1}<br />{line2}</span></div>)}</div>
         </div>
         <div className="hero-photo photo-composition photo-cutout"><BotanicalAccent /><img src={assetUrl('/images/mariana-rocha-cutout.webp')} alt="Dra. Mariana Rocha, médica e CEO da Clínica Vida Bella" fetchPriority="high" /><div className="photo-tag"><span>DRA. MARIANA ROCHA</span><small>Um olhar atento à sua beleza.</small></div></div>
+        <a className="hero-mobile-next" href="#sobre"><span>Conheça a clínica</span><ChevronDown size={20} aria-hidden="true" /></a>
       </section>
       <section className="intro section" id="sobre">
         <div className="intro-left"><div className="eyebrow">01 / NOSSA ESSÊNCIA</div><h2>Mais do que estética.<br /><em>Um cuidado que acolhe.</em></h2><p>Na Vida Bella, sentir-se bem consigo mesma faz parte do cuidado. Atenção individualizada, escuta e uma visão natural da beleza.</p><a className="under-link" href="#instagram">Entre no nosso universo <ArrowUpRight size={17} /></a></div>
