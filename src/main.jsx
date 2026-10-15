@@ -12,7 +12,6 @@ import { assetUrl } from './assets';
 import './hero-reference.css';
 import './hero-mobile.css';
 import './hero-banner.css';
-import { useScrollReveal } from './useScrollReveal';
 import './natural-scroll.css';
 
 const INSTAGRAM = 'https://www.instagram.com/clinicavidabella/';
@@ -45,7 +44,6 @@ function WhatsAppLink({ children, message, className = 'btn primary' }) {
   return <a className={className} href={whatsapp(message)} target="_blank" rel="noreferrer">{children}<ArrowUpRight size={18} /></a>;
 }
 function App() {
-  useScrollReveal();
   const [menu, setMenu] = useState(false);
   const [faq, setFaq] = useState(-1);
   const [name, setName] = useState('');

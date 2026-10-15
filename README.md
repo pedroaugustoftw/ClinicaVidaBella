@@ -1,6 +1,6 @@
 ﻿# Clínica Vida Bella
 
-Landing page em React + Vite, com rolagem natural, animações suaves de entrada nas colunas, identidade visual da clínica, fotografias e questionário de cuidados com encaminhamento ao WhatsApp.
+Landing page em React + Vite, com rolagem nativa contínua, cards de resultados, identidade visual da clínica, fotografias e questionário de cuidados com encaminhamento ao WhatsApp.
 
 ## Desenvolvimento
 
