@@ -1,0 +1,25 @@
+/* Campaign banner: warm gold, editorial typography and a clear booking action. */
+.gallery-stage .hero::before {
+  background-image: radial-gradient(ellipse at 75% 35%, #b7955630, transparent 58%), linear-gradient(90deg, #11120fbd, transparent 80%), url('/images/hero-background.webp');
+}
+.gallery-stage .hero .eyebrow { color: #e0c596; font-size: 10px; letter-spacing: 2px; }
+.gallery-stage .hero h1 { font-size: clamp(48px, 5.6vw, 80px); line-height: 1.08; }
+.gallery-stage .hero h1 > span { display: block; }
+.gallery-stage .hero h1 em { display: block; color: #e0bf86; }
+.gallery-stage .hero .hero-direct {
+  order: -1; color: #191711; background: #dfbf87; border-color: #f0d8ad;
+  box-shadow: 0 8px 30px #d8b77d24; font-weight: 700;
+}
+.gallery-stage .hero .hero-direct:hover { background: #f0d4a4; box-shadow: 0 10px 35px #d8b77d40; }
+.gallery-stage .hero .hero-questionnaire { background: transparent; color: #f1e4ce; border-color: #d1b58266; }
+.gallery-stage .hero .hero-questionnaire:hover { background: #d1b58215; }
+.gallery-stage .hero a:focus-visible, .gallery-stage .hero button:focus-visible { outline: 2px solid #f4d6a0; outline-offset: 5px; }
+@media (max-width: 700px) {
+  .gallery-stage .hero::before { background-image: linear-gradient(90deg, #11110df0, #11110d80 60%, transparent), url('/images/hero-background.webp'); }
+  .gallery-stage .hero .eyebrow { font-size: min(2vw, 1.4cqh); letter-spacing: 1px; }
+  .gallery-stage .hero h1 { font-size: min(10.5vw, 7.4cqh); line-height: 1.08; }
+  .gallery-stage .hero .hero-questionnaire { border: 0; border-bottom: 1px solid #d1b582; }
+}
+@media (min-width: 701px) and (max-height: 800px) {
+  .gallery-stage .hero h1 { font-size: clamp(42px, 4.8vw, 64px); }
+}

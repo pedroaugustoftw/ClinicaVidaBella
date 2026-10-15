@@ -12,6 +12,7 @@ import { whatsapp } from './whatsapp';
 import { assetUrl } from './assets';
 import './hero-reference.css';
 import './hero-mobile.css';
+import './hero-banner.css';
 import { useScrollGallery } from './useScrollGallery';
 import { ScrollGalleryNavigation } from './ScrollGalleryNavigation';
 
@@ -61,12 +62,12 @@ function App() {
       <button className="mobile-menu" aria-label={menu ? 'Fechar menu' : 'Abrir menu'} aria-expanded={menu} aria-controls="main-nav" onClick={() => setMenu(!menu)}>{menu ? <X /> : <Menu />}</button>
     </header>
     <main className="gallery-stage">
-      <section className="hero" id="inicio">
+      <section className="hero" id="inicio" aria-labelledby="hero-title">
         <div className="hero-content">
-          <div className="eyebrow"><span className="eyebrow-line" /> ESTÉTICA, CUIDADO & BEM-ESTAR</div>
-          <h1><span>A beleza</span> <span>de ser</span> <em>você mesma.</em></h1>
-          <p>Um espaço dedicado à sua autoestima, com acolhimento, atenção aos detalhes e cuidado que respeita sua individualidade.</p>
-          <div className="hero-actions"><button type="button" className="btn primary hero-questionnaire" aria-haspopup="dialog" aria-expanded={careOpen} aria-controls="care-questionnaire" onClick={() => setCareOpen(true)}>Descubra seu cuidado ideal <ArrowUpRight size={18} /></button><WhatsAppLink className="btn hero-direct">Agendar minha avaliação</WhatsAppLink><a className="text-link" href="#tratamentos">Conhecer tratamentos <ArrowRight size={17} /></a></div>
+          <div className="eyebrow"><span className="eyebrow-line" /> CLÍNICA DE ESTÉTICA EM ARAPIRACA</div>
+          <h1 id="hero-title"><span>Sua beleza.</span> <span>Seu tempo.</span> <em>Seu cuidado.</em></h1>
+          <p>Harmonização facial, limpeza de pele e depilação a laser em Arapiraca. Na Vida Bella, seu cuidado começa com escuta e uma avaliação só sua.</p>
+          <div className="hero-actions"><button type="button" className="btn primary hero-questionnaire" aria-haspopup="dialog" aria-expanded={careOpen} aria-controls="care-questionnaire" onClick={() => setCareOpen(true)}>Encontre seu cuidado <ArrowUpRight size={18} /></button><WhatsAppLink className="btn hero-direct">Agendar minha avaliação</WhatsAppLink><a className="text-link" href="#tratamentos">Conhecer tratamentos <ArrowRight size={17} /></a></div>
           <div className="hero-values">{[[Leaf, 'Tratamentos', 'personalizados'], [Flower2, 'Beleza natural', 'e harmoniosa'], [Heart, 'Atendimento', 'humanizado'], [ShieldCheck, 'Ambiente seguro', 'e acolhedor']].map(([Icon, line1, line2]) => <div key={line1}><Icon size={28} strokeWidth={1.2} aria-hidden="true" /><span>{line1}<br />{line2}</span></div>)}</div>
         </div>
         <div className="hero-photo photo-composition photo-cutout"><BotanicalAccent /><img src={assetUrl('/images/mariana-rocha-cutout.webp')} alt="Dra. Mariana Rocha, médica e CEO da Clínica Vida Bella" fetchPriority="high" /><div className="photo-tag"><span>DRA. MARIANA ROCHA</span><small>Um olhar atento à sua beleza.</small></div></div>
