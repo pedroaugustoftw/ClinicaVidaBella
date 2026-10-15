@@ -18,8 +18,30 @@
   .gallery-stage .hero h1 em { display: block; white-space: nowrap; }
   .gallery-stage .hero h1 > span { display: block; }
   .gallery-stage .hero-content > p { font-size: min(3.2vw, 2.15cqh); line-height: 1.55; width: 58%; margin-bottom: 2cqh; color: #e0ddd6; }
-  .gallery-stage .hero-photo.photo-cutout { inset: 7cqh -34% auto auto; width: 116%; height: 70cqh; opacity: 1; z-index: 0; overflow: hidden; mask-image: linear-gradient(to bottom, #000 77%, transparent 100%); }
-  .gallery-stage .hero-photo.photo-cutout > img { object-fit: contain; object-position: center bottom; }
+  .gallery-stage .hero-photo.photo-cutout {
+    position: absolute;
+    inset: 7% -34% auto auto;
+    width: 116%;
+    /* Stable viewport units avoid shrinking when mobile browser chrome changes. */
+    height: clamp(340px, 70vh, 640px);
+    height: clamp(340px, 70svh, 640px);
+    min-height: 340px;
+    opacity: 1;
+    z-index: 0;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, #000 77%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 77%, transparent 100%);
+  }
+  .gallery-stage .hero-photo.photo-cutout > img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center top;
+  }
   .gallery-stage .hero-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 1.8cqh; margin: 0; width: 70%; }
   .gallery-stage .hero .hero-direct { order: -1; background: #c3aa7e; color: #171714; border: 1px solid #c3aa7e; width: 100%; padding: 2.3cqh 12px; font-size: min(3vw, 2cqh); border-radius: 5px; gap: 10px; }
   .gallery-stage .hero .hero-questionnaire { width: auto; padding: 1cqh 0; border: 0; border-bottom: 1px solid #b89b6f; border-radius: 0; background: transparent; color: #faf8f5; font-size: min(2.9vw, 1.9cqh); gap: 9px; }
