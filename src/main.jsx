@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client';
 import { ArrowUpRight, ArrowRight, Menu, X, MapPin, Clock, Phone, Instagram, MessageCircle, ShieldCheck, Heart, Check, ChevronDown, Leaf, Flower2 } from 'lucide-react';
 import './style.css';
 import './refinements.css';
-import './gallery.css';
 import './identity.css';
 import './photo-composition.css';
 import { BotanicalAccent, PhotoComposition } from './PhotoComposition';
@@ -13,8 +12,8 @@ import { assetUrl } from './assets';
 import './hero-reference.css';
 import './hero-mobile.css';
 import './hero-banner.css';
-import { useScrollGallery } from './useScrollGallery';
-import { ScrollGalleryNavigation } from './ScrollGalleryNavigation';
+import { useScrollReveal } from './useScrollReveal';
+import './natural-scroll.css';
 
 const INSTAGRAM = 'https://www.instagram.com/clinicavidabella/';
 const treatments = [
@@ -46,7 +45,7 @@ function WhatsAppLink({ children, message, className = 'btn primary' }) {
   return <a className={className} href={whatsapp(message)} target="_blank" rel="noreferrer">{children}<ArrowUpRight size={18} /></a>;
 }
 function App() {
-  const gallery = useScrollGallery();
+  useScrollReveal();
   const [menu, setMenu] = useState(false);
   const [faq, setFaq] = useState(-1);
   const [name, setName] = useState('');
@@ -119,7 +118,6 @@ function App() {
       </section>
       <footer id="encerramento"><div className="footer-brand"><Brand footer /></div><p>Beleza com naturalidade.<br /><em>Cuidado em cada detalhe.</em></p><a className="under-link footer-social" href={INSTAGRAM} target="_blank" rel="noreferrer"><Instagram size={17} /> @clinicavidabella <ArrowUpRight size={17} /></a><div className="footer-bottom"><span>© {new Date().getFullYear()} Clínica Vida Bella · Arapiraca, AL.</span><span>Conteúdo visual da clínica e de suas publicações.</span></div></footer>
     </main>
-    <ScrollGalleryNavigation {...gallery} />
     <CareQuestionnaire open={careOpen} onClose={() => setCareOpen(false)} />
     <a className="floating-whatsapp" href={whatsapp()} target="_blank" rel="noreferrer" aria-label="Conversar pelo WhatsApp"><MessageCircle size={25} /></a>
   </>;
